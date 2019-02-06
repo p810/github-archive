@@ -1,0 +1,16 @@
+{
+    "name": "p810/notification",
+    "description": "An implementation of the observer pattern.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "p810\\Notification\\": "src/"
+        }
+    }
+}

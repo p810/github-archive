@@ -1,0 +1,56 @@
+.latest-posts {
+    article {
+        margin: 1rem 0;
+        padding: 1rem;
+
+        border: 5px solid transparent;
+    }
+
+    article .post-meta header {
+        font-weight: bold;
+        font-size: 13px;
+
+        margin: 0.5rem 0;
+        padding: 0;
+    }
+
+    article .post-meta summary {
+        margin: 0.5rem 0;
+        padding-left: 0.75rem;
+    }
+
+    article .post-meta footer {
+        font-style: italic;
+
+        margin: 0.5rem 0;
+        padding-left: 0.75rem;
+    }
+
+    article .post-avatar {
+        float: right;
+        clear: none;
+
+        text-align: right;
+
+        margin: 0;
+    }
+
+    article .post-avatar img {
+        width:  100px;
+        height: 100px;
+
+        margin: 0;
+    }
+
+    article:nth-child(even) {
+        background-color: @grey-light;
+    }
+
+    article:hover {
+        background-color: @grey-light;
+
+        border: 5px solid @grey-medium;
+
+        cursor: pointer;
+    }
+}

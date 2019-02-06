@@ -1,0 +1,124 @@
+Umi
+=========
+
+Umi is a simple IRC client, written in Python.
+
+Tested against **Python 2.7.8**.
+
+Version
+-------
+
+1.0.3d
+
+This patch reformats the way log messages will be displayed and fixes `Umi/__init__.py` to pass `Config` into `Logger`.
+
+Components
+-----------
+
+Umi is an aggregate of a few simple classes:
+
+- **IRC.py** handles network interaction using the standard `socket` and `select` modules
+- **Config.py** stores our client's information and provides access to it
+- **Logic.py** tells **IRC.py** how it should respond to events (commands sent from the IRC network)
+- **Message.py** parses incoming data and provides helper functions for dealing with IRC protocol
+- **Flags.py** is a (very) simple way of setting conditions for events
+- **Logger.py** provides a means of writing messages to the console, and will soon support logging to SQLite and the filesystem
+
+
+Everything that the client needs to run is instantiated in **\_\_init__.py** and imported into the executing script (`umi-client`).
+
+Installation
+--------------
+
+To connect the client to the IRC network of your choice, edit **Config.py** starting at line 7:
+
+```python
+'network' : {
+    'addr' : 'This is the IP address or domain name of the server',
+    'port' : 'This is the port to connect to'
+}
+```
+
+You can change the **username**, **nickname**, and **password** parameters starting at line 12:
+
+```python
+'identity' : {
+    'name' : 'Username',
+    'nick' : 'Nickname',
+    'pass' : 'Password'
+}
+```
+
+There is an array of options for debugging purposes:
+
+```python
+'dev' : {
+  'out' : True, # Specifies whether to print incoming data
+  'log' : None, # If a filename is provided, incoming data will be written here rather than printed ('out' must still be True)
+  'notify' : False # Only supported in Mac OS X 10.8; allows the user to set up system notifications
+}
+```
+
+Running
+-------
+
+To run the client, `cd` into the root directory and type `./umi-client`
+
+Notifications
+-------------
+
+Notifications are a feature supported for users of Mac OS X >= 10.8. They may be enabled via the `dev` index in Config, and activated by calling `Logger.notify('Title', 'Notification text')`.
+
+Events
+------
+
+Events are how Umi responds to commands from the IRC server. Currently, event handlers are bound to the `Logic` class in **Logic.py**.
+
+An event handler may be defined as a method of `Logic` by taking a second argument of the tokenized data read from the server.
+
+Your event handler will only be invoked when a registered command has been received from the server. For example, when the server sends `PING a&j*lKi3m`, the `ping` trigger is found in `Logic.handlers` and we invoke the method set to that key.
+
+If you'd like for the client to trigger multiple methods, a list may be passed as the value.
+
+Outgoing messages must be set via `self.output` (the carriage return/newline is added in **IRC.py** and does not need to be included). 
+
+The object stored in `self.flags` may be used to set conditions for the bot. A quick example of how it works:
+
+```python
+def join(self, incoming):
+  if not self.flags.has('joined'):
+    self.output.append('JOIN #channel')
+
+    self.flags.set('joined', True)
+```
+
+The `Message` class stored in `self.msg` simplifies the process of interpreting data sent from the server. 
+
+Below is an example which will send "Hello, world!" in response to a `PRIVMSG` command. 
+
+```python
+# In __init__(), we add privmsg to the handlers dict
+self.handlers = {
+  'ping'    : 'pong',
+  'privmsg' : 'hello_world'
+}
+
+# Then we define hello_world()
+def hello_world(self, incoming):
+  # Fetch the user's information
+  user = self.msg.user()
+
+  if user is None:
+    return False
+  else:
+    nick, host = user
+
+  # Determine if we need to send this to a channel or a user
+  origin = self.msg.channel()
+
+  if origin is None:
+    origin = nick
+
+  # Send 'Hello, world!' to the server
+  self.output.append('PRIVMSG {0} Hello world!'.format(origin))
+```

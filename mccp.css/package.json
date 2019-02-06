@@ -1,0 +1,16 @@
+{
+  "name": "mccp.css",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A modernized version of the vBulletin theme for the Miniclip Club Penguin Forums.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.3.2",
+    "gulp-less": "^3.3.0",
+    "gulp-watch": "^4.3.11"
+  }
+}

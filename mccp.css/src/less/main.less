@@ -1,0 +1,55 @@
+@import 'grid';
+@import 'variables';
+@import 'components/buttons';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: @font-body;
+    background-color: #eee;
+    position: relative;
+    height: 100%;
+}
+
+body {
+    padding: 0 5%;
+}
+
+header, h1, h2, h3, h4, h5, h6 {
+    font-family: @font-header;
+}
+
+a:not(.button), a:not(.button):visited {
+    color: @blue-light;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a.inverted, a.inverted:visited {
+    text-decoration: none;
+}
+
+a.inverted:hover {
+    text-decoration: underline;
+}
+
+a.white, a.white:visited, a.white:hover {
+    color: #fff;
+}
+
+main#content-wrapper {
+    background-color: #fff;
+
+    position: relative;
+    min-height: 100%;
+
+    box-shadow: 3px 0 1px #e3e3e3;
+}
+
+@import 'header';
+@import 'components/home/post';

@@ -1,0 +1,22 @@
+<plat-navbar plat-options="{position: 'top'}"></plat-navbar>
+
+<div class="row">
+    <div class="col-phn-11 col-phn-offset-1">
+        <h3 id="title" contenteditable="true" plat-tap="showIcon()" onclick="this.focus();">
+            {{post.title}}
+        </h3>
+        
+        <h5>Posted by {{post.username}}</h5>
+        
+        <p id="post-body" plat-tap="showIcon()" contenteditable="true">
+            {{post.body}}
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-phn-8 col-phn-offset-4">
+        <plat-button class="button-success button-outline button-large hidden editIcon" plat-tap="commitChanges()">Save changes</plat-button>
+        <plat-button class="button-caution button-outline button-large hidden editIcon" plat-tap="cancelChanges()">Cancel</plat-button>
+    </div>
+</div>

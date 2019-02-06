@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2018 Your Name <you@email.com> -->
+<component type="desktop">
+  <id>com.github.p810.gtk-hello-world</id>
+  <metadata_license>CC0</metadata_license>
+  <name>Hello World</name>
+  <summary>An app that will say hello to whoever is input.</summary>
+  <description>
+    <p>Type in the name of whoever you want to greet, and voila: This enterprise level, production ready, Vala application will greet that person.</p>
+  </description>
+</component>

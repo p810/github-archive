@@ -1,0 +1,20 @@
+{
+    "name": "p810/amethyst",
+    "description": "A microframework that aims to be fun to write and easy to understand.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "require": {
+        "p810/mysql-helper": "dev-master",
+        "p810/Dot": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "p810\\Amethyst\\": "src/"
+        }
+    }
+}

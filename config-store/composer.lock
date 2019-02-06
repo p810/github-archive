@@ -1,0 +1,51 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "fa3166a0686181267e20bb9ba933fbfb",
+    "packages": [
+        {
+            "name": "p810/dot",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/p810/Dot.git",
+                "reference": "d7129f37d3bc376693db9a56abbf64bf0ab3c004"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/p810/Dot/zipball/d7129f37d3bc376693db9a56abbf64bf0ab3c004",
+                "reference": "d7129f37d3bc376693db9a56abbf64bf0ab3c004",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/Dot.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lily",
+                    "email": "hellopayton@gmail.com"
+                }
+            ],
+            "description": "A utility for traversing arrays using dot notation.",
+            "time": "2016-10-28T01:40:58+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

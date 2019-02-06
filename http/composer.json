@@ -1,0 +1,14 @@
+{
+    "name": "p810/http",
+    "description": "Utility classes for HTTP requests and responses.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "p810\\HTTP\\": "src/"
+    }
+}

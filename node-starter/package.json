@@ -1,0 +1,7 @@
+{
+    "name": "my-new-site-2015",
+    "private": true,
+    "dependencies": {
+        "express": "*"
+    }
+}

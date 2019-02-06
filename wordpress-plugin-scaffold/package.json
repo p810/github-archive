@@ -1,0 +1,17 @@
+{
+  "name": "wordpress-plugin-scaffold",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A template for WordPress plugin development with some dependencies I find useful.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Payton <hellopayton@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cli": "^1.2.2",
+    "gulp-zip": "^4.0.0"
+  }
+}

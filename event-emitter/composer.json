@@ -1,0 +1,15 @@
+{
+    "name": "p810/event-emitter",
+    "description": "An event broadcaster for PHP inspired by Node's EventEmitter.",
+    "autoload": {
+        "psr-4": {
+            "p810\\EventEmitter\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.1"
+    }
+}

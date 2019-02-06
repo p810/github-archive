@@ -1,0 +1,23 @@
+{
+    "name": "p810/TableView",
+    "description": "A package that formats tabular data.",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "p810\\TableView\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit --bootstrap ./vendor/autoload.php tests/"
+    }
+}

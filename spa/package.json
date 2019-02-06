@@ -1,0 +1,18 @@
+{
+  "name": "spa",
+  "version": "1.0.0",
+  "description": "Another JavaScript single page application utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "./node_modules/.bin/babel src -d lib && ./node_modules/.bin/uglifyjs lib/app.js --compress --output=./lib/app.js"
+  },
+  "author": "Payton Bice <hellopayton@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "uglify-js": "^3.4.7"
+  }
+}

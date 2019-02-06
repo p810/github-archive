@@ -1,0 +1,15 @@
+{
+    "name": "p810/config-parser-test",
+    "description": "A proof of concept package for parsing configuration files",
+    "authors": [
+        {
+            "name": "Lily Bice",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "p810\\Configuration\\": "src/"
+        }
+    }
+}

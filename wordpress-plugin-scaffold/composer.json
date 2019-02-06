@@ -1,0 +1,26 @@
+{
+    "name": "p810/wordpress-plugin-scaffold",
+    "description": "A template for WordPress plugin development with some dependencies I find useful.",
+    "type": "template",
+    "require": {
+        "twig/twig": "v1.31.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "p810\\WPScaffold\\": "src/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Payton",
+            "email": "hellopayton@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "scripts": {
+        "test": "phpunit --bootstrap ./vendor/autoload.php tests/"
+    }
+}

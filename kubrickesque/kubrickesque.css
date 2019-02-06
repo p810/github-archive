@@ -1,0 +1,180 @@
+/*
+ * Kubrickesque
+ *
+ * A CSS3 compliant revisit of Michael Heilemann's
+ * "Kubrick" theme.
+ *
+ * Kubrick is notorious for being the default theme 
+ * that was shipped with Wordpress from versions 1.2
+ * to 3.0 (May '04 - June '10). 
+ */
+
+ /* Body and container */
+
+body {
+	font-size: 75%;
+	font-family: 'Lucida Grande', Verdana, Helvetica, Arial, sans-serif;
+	background: #d5d6d7;
+}
+
+.container {
+	background: #fff;
+	border: 1px solid #959596;
+	text-align: left;
+	border-radius: 5px;
+	margin: 1% 20%;
+	padding: 5px;
+	overflow: overlay;
+	position: relative;
+}
+
+/* Header */
+
+header {
+	text-align: center;
+	margin: 0%;
+	padding: 2%;
+	border-radius: inherit;
+	border-bottom-right-radius: 0;
+
+	/* Thanks go out to ColorZilla and their gradient
+	 * generator for this next block. Check it out! 
+	 * <http://www.colorzilla.com/gradient-editor/> */
+	
+	background: rgb(110,172,221); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(110,172,221,1) 0%, rgba(66,129,183,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(110,172,221,1)), color-stop(100%,rgba(66,129,183,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(110,172,221,1) 0%,rgba(66,129,183,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(110,172,221,1) 0%,rgba(66,129,183,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(110,172,221,1) 0%,rgba(66,129,183,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(110,172,221,1) 0%,rgba(66,129,183,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6eacdd', endColorstr='#4281b7',GradientType=0 ); /* IE6-9 */
+}
+
+header a, header a:visited {
+	color: #fff;
+	margin: 0;
+	text-decoration: none;
+	transition: text-shadow 0.2s linear;
+}
+
+header a:hover {
+	color: #fff;
+	text-shadow: 0 1px 5px #000;
+}
+
+header h1 {
+	font-size: 30pt;
+	margin: 0;
+	color: #fff;
+}
+
+header p {
+	color: #fff;
+	font-size: 8pt;
+}
+
+/* Navigation */
+
+nav {
+	float: right;
+	margin: 0;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border: 1px solid #777;
+	border-top: none;
+	padding: 1%;
+	background-color: #f1f1f1;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+}
+
+nav li {
+	list-style: none;
+	display: inline;
+	font-size: 10pt;
+	padding-left: 5px;
+}
+
+nav a, nav a:visited {
+	color: #585858;
+	text-decoration: none;
+	padding-bottom: 2.5px;
+	margin: 0;
+}
+
+nav a:hover, nav a.active {
+	color: #3178C4;
+	text-decoration: none;
+	padding-bottom: 2.5px;
+	border-bottom: 1px solid #3178C4;
+	margin: 0;
+}
+
+/* Content area */
+
+.content {
+	margin: 5% 0 0 1%;
+}
+
+article {
+	margin: 0 0 3% 0;
+	padding: 0;
+}
+
+article h2 {
+	font-size: 15pt;
+	margin: 0;
+	color: #3c3c3c;
+}
+
+article .meta {
+	text-align: left;
+	float: right;
+}
+
+article .meta p {
+	color: #6b6b6b;
+	text-transform: uppercase;
+	font-size: 8pt;
+	text-align: left;
+	display: inline-block;
+	padding-top: 5px;
+	border-top: 1px dashed #d3d3d3;
+}
+
+/* Miscellaneous */
+
+.calendar {
+	float: left;
+	margin: 0;
+	width: 90px;
+	height: 80px;
+	border-radius: 16px;
+	position: relative;
+	background: #fff;
+	border: 1px solid #f1f1f1;
+	margin: 1% 2%;
+}
+
+.calendar-header {
+	background: rgba(67, 130, 184, 0.64);
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	width: 100%;
+	text-align: center;
+	line-height: 35px;
+	height: 30px;
+	color: #fff;
+	text-shadow: 0 1px 2px #333;
+}
+
+.calendar-date {
+	text-align: center;
+	line-height: 50px;
+	font-size: 15pt;
+}
